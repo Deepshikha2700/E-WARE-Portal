@@ -1,0 +1,37 @@
+<head>
+</head>
+<body>
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQnpNxiQNSlqwfmA997Q0Fz2LrPHN0_MvrMzQ&usqp=CAU" alt="deactivate" width="500px" height="200px">
+<pre style="font-family: 'Mate SC', serif; font-size: 17px;">
+<h2 style="font-family: 'Mate SC', serif;">Dear User,</h2>
+Warning Before Gmail Account Deactivation
+
+We are following up on your request to secure the Gmail account.
+Once this process is completed, access to the account will be blocked and no one will be able to 
+log in. If, eventually, the account needs to be re-enabled, please let us know and we will help 
+initiate the recovery process.
+
+Please be aware that in order to recover the account the owner needs to use the recovery options 
+that are currently configured. These are normally listed under the “Ways we can verify it’s you” 
+in the account security settings at-
+
+<form method="GET" action="mail_template.html">
+    {% csrf_token %}
+<a href="http://127.0.0.1:8000/mail_template">myaccount.google.com/security</a>
+</form> 
+
+Unfortunately, if the owner is unable to verify the ownership through the standard mechanisms or 
+existing recovery information, it will be very difficult to recover the account, so we advise that 
+this recovery information is valid and accessible by the account owner.
+
+Given these considerations, we kindly ask you to confirm your request to secure the account with 
+assurance that the owner has control on their recovery information before we move forward.
+
+Thank you for your understanding. Please do not hesitate to let us know if you have any questions.
+
+Kind Regards
+
+
+</pre>
+</body>
+</html>

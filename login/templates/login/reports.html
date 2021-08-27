@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Reports</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+<table class="table table-bordered table-dark">
+    <thead>
+      <tr>
+        <!-- <th scope="col">#</th> -->
+        <th scope="col">Campaign Name</th>
+        <th scope="col">Template Category</th>
+        <th scope="col">Country</th>
+        <th scope="col">Sender Email</th>
+        <th scope="col">Sender Name</th>
+        <th scope="col">Subject</th>
+        <th scope="col">Date</th>
+        <th scope="col">Count</th>
+        <th scope="col">Import users</th>
+
+        <th scope="col">Training Type</th>
+
+
+
+
+
+      </tr>
+    </thead>
+    <tbody>
+      {% for i in campaigns %}
+      <tr>
+        <!-- <th scope="row"></th> -->
+        <!-- <td>Mar</td>
+        <td>Otto</td>
+        <td>@mdo</td> -->
+        <!-- <td>{{i.id}}</td> -->
+        <td>{{i.name}}</td>
+        <td>{{i.Select_Template_Category}}</td>
+        <td>{{i.select_country}}</td>
+        <td>{{i.mail}}</td>
+        <td>{{i.sname}}</td>
+        <td>{{i.subject}}</td>
+        <td>{{i.date}}</td>
+        <td>{{i.count}}</td>
+        <td>{{i.interval}}</td>
+        <td>{{i.myfile}}</td>
+        <td>{{i.ttype}}</td>
+        {% endfor%}
+      </tr>
+      <!-- <tr>
+        <th scope="row">2</th>
+        <td>Jacob</td>
+        <td>Thornton</td>
+        <td>@fat</td>
+      </tr>
+      <tr>
+        <th scope="row">3</th>
+        <td colspan="2">Larry the Bird</td>
+        <td>@twitter</td> -->
+       
+    
+    </tbody>
+  </table>
+</body>
+  </html>

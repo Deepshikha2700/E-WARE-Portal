@@ -1,0 +1,387 @@
+<!-- <?php
+$host="localhost";
+$user="root";
+$password="";
+$db="demo";
+
+?> -->
+
+<!DOCTYPE html>
+{% load socialaccount %}
+<html lang="en">
+<head>
+	{% load static %}
+
+	<title>Login page</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+     <meta name="google-signin-client_id" content="259490995627-mgusiablfb07htf65ph419puckj8673k.apps.googleusercontent.com">
+	
+<script src="https://apis.google.com/js/platform.js"async defer></script>
+	 <!--===============================================================================================-->	
+	<link rel="icon" type="image/png" href="{% static 'photos/favicon.ico'%}"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/bootstrap/css/bootstrap.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/font-awesome-4.7.0/css/font-awesome.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'fonts/Linearicons-Free-v1.0.0/icon-font.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/animate/animate.css'%}">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/css-hamburgers/hamburgers.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'vendor/select2/select2.min.css'%}">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lmain.css'%}">
+	<link rel="stylesheet" type="text/css" href="{% static 'css/lutil.css'%}">
+<!--===============================================================================================-->
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
+<style>
+	.open-button {
+  background-color: #333333;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  /* opacity: 0.8; */
+  position: fixed;
+  bottom: 310px;
+  /* right: 79px;
+  width: 280px; */
+  /* margin-bottom: 50%; */
+  
+  font-family: Montserrat-Bold;
+  font-size: 15px;
+  align-items: center;
+  /* padding: 0 25px; */
+  height: 50px;
+  /* position: relative; */
+  z-index: 1;
+
+  display: flex;
+  justify-content: center;
+  transition: all 0.4s;
+
+  border-radius: 25px;
+
+}
+.open-button:hover {
+    background: rgb(8, 10, 10);
+    color: white;
+}
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0px;
+  right: 27px;
+  border: 3px solid black;
+  z-index: 9;
+
+}
+.form-container {
+  max-width: 550px;
+  padding: 5px;
+  background-color: white;
+}
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 9px;
+  margin: -9px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+.form-container .btn {
+  background-color: #040331;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  border-radius: 36px;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: rgb(34, 41, 70);
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+@media screen and (max-width: 300px) {
+   .open-button {
+    width: 100%;
+  }
+}
+</style>
+
+</head>
+<body>
+	<!-- {% for message in messages %}
+  <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+    {{ message }}
+  </div>
+{% endfor %} -->
+	 
+{% if messages %}	
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+	<strong>Message : </strong> {{ message }}
+	<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+	  <span aria-hidden="true">&times;</span>
+	</button>
+  </div>
+{% endfor %}
+{% endif %}
+
+	 <marquee   width="100%" direction="left" height="29px" scrollamount="10" onMouseOver="this.stop()" onMouseOut="this.start()">
+	 
+		A Phishing campaign portal to check the cyber-security awareness of employees.
+
+		</marquee> 
+		<style>
+			marquee{
+			font-size: 22px;
+			font-weight: 100;
+			color:white;
+			font-family: Montserrat-Bold;
+			margin-top:1.5%;
+			
+			}
+		  </style>
+	
+	<div class="limiter">
+		<div class="container-login100"> <style>
+			
+			body{
+				background-image: url( "{% static 'photos/phishing1.jpg'%}");
+				
+				
+			}
+
+		</style>
+		<div class="image-container-left">
+
+		<img src="{% static 'photos/phishing image.png'%}" alt="phishing"  >
+		<style>
+			.image-container-left{
+				
+				width: 100%;
+				height: 40%;
+				float: left;
+				margin-right: 30%;
+				margin-bottom: -34%;
+				margin-top: 8%;
+		
+
+			}
+		</style>
+	</div>
+
+	
+		
+	
+			<div class="wrap-login100 p-t-190 p-b-30" >
+				
+				<!-- <div class="login100-form-avatar">
+					<img src="{% static 'photos/logo.png'%}" alt="AVATAR">
+				</div> --> 
+				<!-- <form class="login100-form validate-form" method="POST" action="home">
+					{% csrf_token %}
+					<div class="login100-form-avatar">
+						<img src="{% static 'photos/logo.png'%}" alt="AVATAR">
+					</div> -->
+					
+				<!-- <div class="login100-form"> -->
+				
+					<div class="login100-form-avatar">
+						<img src="{% static 'photos/logo.png'%}" alt="AVATAR">
+					</div>
+					<div class="container-login100-form-btn p-t-10">
+						<button class="login100-form-btn" onclick="openForm()">Sign Up First</button></div><br>
+
+<div class="form-popup" id="myForm">
+  <form action="signup" class="form-container" method="POST" >
+	
+	{% csrf_token %}
+	
+	<h4>Enter your details</h4>
+	<label for="name"><b>Username</b></label>
+	<input type="text" placeholder="Username must be unique" name="name" required>
+	
+	
+	<label for="datemax"><b>D.O.B -must be 18 years or above:</b></label>
+	<input type="date" id="datemax" name="datemax" ><br><br>
+
+    <label for="email"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw1"><b>Password</b></label>
+	<input type="password" placeholder="Enter Password" name="psw1" id="textPassword" minlength="6"  required>
+	<span toggle="#password-field" class="symbol-input100">
+		
+			<i class="form-control-feedback fa fa-eye" style="cursor:pointer;margin:8px 318px;padding-top: 53px;pointer-events:all;font-size: 18px;right:0;top:0;" id="togglepassword"></i>
+		
+		<!-- <i class="fa fa-fw fa-eye field_icon toggle-password"></i> -->
+	</span>
+	<label for="psw2"><b>Confirm Password</b></label>
+	<!-- <span toggle="#password-field" class="symbol-input100">
+		
+		<i class="form-control-feedback fa fa-eye" style="cursor:pointer;margin:8px 318px;padding-top: 75px;pointer-events:all;font-size: 18px;right:0;top:0;" id="togglePassword"></i>
+	
+</span> -->
+
+	<input type="password" placeholder="Re-Enter Password" name="psw2"  id="txtConfirmPassword" minlength="6" required>
+	<!-- <span toggle="#password-field" class="symbol-input100">
+		
+		<i class="form-control-feedback fa fa-eye" style="cursor:pointer;margin:8px 318px;padding-top: 75px;pointer-events:all;font-size: 18px;right:0;top:0;" id="togglePassword"></i>
+	
+	
+</span> -->
+
+    <button type="submit" class="btn" onclick="return Validate()">Sign Up</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+
+
+
+					<!-- <div class="g-signin2"></div> -->
+					
+					<!-- <a href="{% provider_login_url 'google' %}">Login With Google</a> -->
+					
+						<form class="login100-form validate-form" method="POST" action="login">
+							{% csrf_token %}
+							<!-- <div class="login100-form-avatar">
+								<img src="{% static 'photos/logo.png'%}" alt="AVATAR">
+							</div> -->
+							 <!-- <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Sign Up</button>-->
+	 
+		
+			
+		 
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = "Username is required">
+						<input class="input100" type="text" name="username" id="loginusername" placeholder="Username" required>
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-user"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input m-b-10" data-validate = " Password is required">
+						
+						<input class="input100" type="password" id="loginpassword" name="password" placeholder="Password" required>
+						<span class="focus-input100"></span>
+						<!-- <span toggle="#password-field" class="fa fa-fw fa-eye field_icon toggle-password"></span> -->
+						<span toggle="#password-field" class="symbol-input100">
+							<i class="fa fa-lock"></i>
+								<i class="form-control-feedback fa fa-eye" style="cursor:pointer;margin:8px 318px;pointer-events:all;font-size: 18px;right:0;top:0;" id="togglePassword"></i>
+							
+							<!-- <i class="fa fa-fw fa-eye field_icon toggle-password"></i> -->
+						</span>
+						
+						
+					</div>
+
+					<div class="container-login100-form-btn p-t-10">
+						<!--<a href="C:\Users\Deepshikha\Desktop\home page\home_page.html">-->
+
+						<button class="login100-form-btn" onclick="myonclickfn()">
+							Login
+						</button></div>
+						
+						<div class="text-center w-full p-t-25 p-b-230">
+							<a href="#" class="txt1"><p>OR</p>
+								<!-- <div class="g-signin2"> -->
+							<a href="{% provider_login_url 'google' %}">Login with <i class='fa fa-google'></i> Google</a>
+							
+							</a>
+						</div>
+				
+					
+
+					
+				</form>
+				
+				
+			</div>
+		</div>
+	</div>
+	
+		 
+	
+		
+	  <script>
+		 
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		}
+		
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+		function Validate() {
+        var password = document.getElementById("txtPassword").value;
+        var confirmPassword = document.getElementById("txtConfirmPassword").value;
+        if (password != confirmPassword) {
+            alert("Passwords do not match.");
+            return false;
+        }
+        return true;
+    }
+// 		 
+
+		const togglePassword = document.querySelector('#togglePassword');
+  const password = document.querySelector('#loginpassword');
+ 
+  togglePassword.addEventListener('click', function (e) {
+    // toggle the type attribute
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    // toggle the eye slash icon
+    this.classList.toggle('fa-eye-slash');
+});
+
+// const togglePassword = document.querySelector('#toggle');
+//   const password = document.querySelector('#txtPassword');
+ 
+//   togglePassword.addEventListener('click', function (e) {
+//     // toggle the type attribute
+//     const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+//     password.setAttribute('type', type);
+//     // toggle the eye slash icon
+//     this.classList.toggle('fa-eye-slash');
+// });
+
+		</script>
+
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="{% static 'vendor/jquery/jquery-3.2.1.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/bootstrap/js/popper.js'%}"></script>
+	<script src="{% static 'vendor/bootstrap/js/bootstrap.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src="{% static 'vendor/select2/select2.min.js'%}"></script>
+<!--===============================================================================================-->
+	<script src='{% static "js/lmain.js"%}'></script>
+	<script src='{% static "js/users.js"%}'></script>
+	<script src="https://apis.google.com/js/api:client.js"></script>
+<!-- <script src="js/servers.js"></script> -->
+
+</body>
+</html>

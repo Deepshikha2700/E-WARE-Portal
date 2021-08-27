@@ -1,0 +1,204 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    {% load static %}
+  	<title>ABOUT US</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+
+		
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{% static 'css/astyle.css'%}">
+  </head>
+  <body>
+    <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+
+          <button type="button" id="sidebarCollapse" class="btn btn-primary">
+            <i class="fa fa-bars"></i>
+            <span class="sr-only">Toggle Menu</span>
+          </button>
+          <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <i class="fa fa-bars"></i>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="nav navbar-nav ml-auto">
+              <li class="nav-item active">
+                  <a class="nav-link" href="#">HOME</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">PROFILE</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="C:\Users\Deepshikha\Desktop\home page\About us\aboutus.html">ABOUT US</a>
+              </li>
+              <li class="nav-item">
+                  <a class="nav-link" href="#">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+        </div></nav> -->
+        <!-- <header>
+            <div class="container">
+              <div class="logo-box">
+                <a href="/">
+                  <img src="{% static 'photos/logo.png'%}">
+                </a>
+              </div>
+              <nav>
+              <ul>
+                <li><a href="home">home</a></li>
+                <li><a href="">work</a></li> -->
+                <!-- <li><a href="profile/">Profile</a></li>
+                <li><a href="about/">about US</a></li>
+                <li><a href="contact/">contact US</a></li>
+             </ul>
+            </nav>
+            </div>
+          </header> -->
+          
+          <!-- <a href="home" target="_self" class="topnav-icons fa fa-home w3-left w3-bar-item w3-button" title="Home"></a> -->
+          <nav class="navbar navbar-expand-lg navbar-light bg-light " style="margin-left: 9%; margin-right: 9%;">
+            <div class="container-fluid">
+        
+              <!-- <button type="button" id="sidebarCollapse" class="btn btn-primary">
+              <i class="fa fa-bars"></i> -->
+              <span class="sr-only">Toggle Menu</span>
+              </button>
+              <!-- <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+              </button> -->
+        
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="nav navbar-nav ml-auto">
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'home' %}">HOME</a>
+                </li>
+                <li class="nav-item ">
+                  <a class="nav-link" href="{% url 'profile' %}" >PROFILE</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">ABOUT US</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="{% url 'contact' %}">CONTACT US</a>
+                </li>
+              </ul>
+              </div>
+            </div>
+            </nav>
+            
+          <div class="about-section">
+  
+    <h1>About Us </h1>
+    <p>Who we are and What we do.</p>
+    <!-- <p>Resize the browser window to see that this page is responsive by the way.</p> -->
+  </div>
+  
+  <h2 style="text-align:center">Our Team</h2>
+  <div class="row">
+    <div class="column">
+      <div class="card">
+        <img src="/w3images/team1.jpg" alt="Deepshikha" style="width:100%">
+        <div class="container">
+          <h2>Deepshikha</h2>
+          <p class="title">Front-End + Back-End</p>
+          <h6><em><u>Technical Knowledge</u></em></h6>
+          
+          <i class="bx bxs-arrow-from-left "></i>Beginner in - </u>
+          <li class="title">Django </li>
+          <i class="bx bxs-arrow-from-left "></i>Proficient in </u>-
+          <li class="title">HTML, CSS, Bootstrap, JavaScript, C++ </li>
+         <i class="bx bxs-arrow-from-left "></i>Sufficient Knowledge of </u>- 
+          <li class="title">CyberSecurity, Data Privacy Fundamentals, SIEM(QRADAR)</p> </li>
+          <h6><em><u>Projects Undertaken</u></em></h6>
+          
+          <li></i>AES Cryptography Tool </u></li>
+          <p class="title">A symmetric cryptography tool used to encrypt as well as decrypt  text, images, files,    folders saved in a system to protect them from the attackers. </p></ul>
+          <!-- <li class="title"><i class="bx bxs-arrow-from-left "></i>Proficient in </u>-</li>
+          <li class="title">HTML, CSS, Bootstrap, JavaScript, C++ </li>
+          <li class="title"><i class="bx bxs-arrow-from-left "></i>Sufficient Knowledge of </u>- </li>
+          <li class="title">CyberSecurity, Data Privacy Fundamentals, SIEM(QRADAR)</p> </li></ul> -->
+
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <h6><em><u>Contact at</u></em></h6>
+          <i class="bx bxs-envelope "></i>deepshikha2700@gmail.com</p>
+          <i class="bx bxl-linkedin-square "></i><a href="https://www.linkedin.com/in/deepshikha-27">LinkedIn Profile</a></p></span>
+
+          <!-- <p><button class="button">Contact</button></p> -->
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'photos/Khushi.png'%}" alt="Khushi" style="width:70%">
+        <div class="container">
+          <h2>Khushi Gulati</h2>
+          <p class="title">Front-End + Back-End</p>
+          <h6><em><u>Technical Knowledge</u></em></h6>
+          
+          <i class="bx bxs-arrow-from-left "></i>Beginner in - 
+          <li class="title">Django </li>
+          <i class="bx bxs-arrow-from-left "></i>Proficient in -
+          <li class="title">Networking and CyberSecurity </li>
+          <i class="bx bxs-arrow-from-left "></i>Sufficient Knowledge of - 
+          <li class="title">Python , C , C++ , HTML, CSS</p> </li>
+          
+          <h6><em><u>Projects Undertaken</u></em></h6>
+         
+          <li>ADRISHYA</li>
+          <p class="title">Steganography Tool Using tkinter in Python
+            Steganography is the technique of hiding secret data within an ordinary, non-secret, file or message in order to avoid detection; the secret data is then extracted at its destination.</p></ul>
+          
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          <h6><em><u>Contact at</u></em></h6>
+
+          <span><i class="bx bxs-envelope "></i> khushigulati71@gmail.com</p></span>
+          <i class="bx bxl-linkedin-square "></i><a href="https://www.linkedin.com/in/deepshikha-27">LinkedIn Profile</a></p></span>
+
+
+          <!-- <p><button class="button">Contact</button></p> -->
+        </div>
+      </div>
+    </div>
+  
+    <div class="column">
+      <div class="card">
+        <img src="{% static 'photos/mohit.jpg'%}" alt="Mohit" style="width:70%">
+        <div class="container">
+          <h2>Mohit Chauhan</h2>
+          <p class="title">Front-End </p>
+          <h6><em><u>Technical Knowledge</u></em></h6>
+          <!-- <ul class="title"> -->
+          <i class="bx bxs-arrow-from-left "></i>Beginner in - </u>
+          <li class="title">C, C++ </li>
+          <i class="bx bxs-arrow-from-left "></i>Proficient in </u>-
+          <li class="title">PHP </li>
+          <i class="bx bxs-arrow-from-left "></i>Sufficient Knowledge of </u>- 
+          <li class="title">Cloud Computing</p> </li></ul>
+          <h6><em><u>Projects Undertaken</u></em></h6>
+          
+          <li>E-Fashion Website </u></li>
+          <p class="title">Online fashion store selling watches, clothes, other accessories providing an attractive and interactive user interface. </p></ul>
+          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+          
+          <h6><em><u>Contact at</u></em></h6>
+
+            <i class="bx bxs-envelope "></i> mohit1998maddy@gmail.com </p></span>
+            <i class="bx bxl-linkedin-square "></i><a href="https://www.linkedin.com/in/mohit-chauhan-91469920b">LinkedIn Profile</a></p></span>
+
+          <!-- <p><button class="button">Contact</button></p> -->
+        </div>
+      </div>
+    </div>
+  </div>
+  </body>
+</html>
